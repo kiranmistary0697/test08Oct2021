@@ -1,0 +1,38 @@
+
+
+CSS :
+
+6.In your own words, explain css specificity.
+Ans: In simple words css specificity means which css should be applied to the element
+     specificity is based on the selector types and their number of declaration , if a element have more than one declaration, last declaration will be applied
+      order of specificity -> type selector, class selector and id selector
+
+7.In your own words, explain, what is ‘!important’ in css.  Also how does it work?  Are there any special circumstances when using it, where it’s behaviour might not be what you expect?
+Ans:  !important can be used to override some styling of an element.
+       If an element has already uses important, then it might not work as expected.
+ 
+8. What is your prefered layout system: inline-block, floating + clearing, flex, grid, other?  And why?
+Ans: flex is the prefered layout property
+     It's easy to use , works very well for one dimensional layouts and its not limited to that we can create complex layout like grid using flex as well.
+     using it we can create responsive layout easily
+
+9.Are negative margins legal and what do they do (margin: -20px)?
+Ans:yes, negative margins are legal
+    They move the position of the element based on provided values eg. margin-top: -20px; will move element top 20px
+
+10.If a <div/> has no margin or other styling and a <p/> tag inside of it has a margin top of some kind, the margin from the <p/> tag will show up on the div instead (the margin will show above the div not inside of it), why is this?  What are the different things that can be done to prevent it?
+Ans: Because the default display property of <div/> is block and block takes the margin of child element.
+
+
+Unit tests:
+
+11.What technologies do you use to unit test your react components?
+Ans:I'm using "Enzyme", "jest" and "React Testing Library" for testing my react components.
+
+12:Are there any pitfalls associated with this technology that have caused you difficulty in the past?
+Ans : Yes, while using these library I faced some rendering issue. And as well as when I want to render component dynamically depends on state at that time I'm facing some issues.
+
+13:How do you test in your unit tests to see if the correct properties are being passed to child components.
+Ans : First of all I'll  declare "beforeEach" function which contains one callback function In which I'll define my props to be pass on component. And while describe my test cases at that time I'll use "Object.keys(component.props())" which returns me all the properties which is passed on that particular component.
+
+
