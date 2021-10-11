@@ -1,0 +1,68 @@
+
+
+Javascript:
+
+1.What is your favourite new javascript feature and why?
+Ans : Conditional Rendering is my favourite javascript feature.
+   It helps developer to show meanigfull output or we can say show different components if there is different conditions.
+
+2.Explain an interesting way in which you have used this javascript feature.
+Ans :
+                    {!isLoading &&
+                    (rows.length > 0 ? (
+                        <tbody {...getTableBodyProps()}>
+                            {rows.map((row, i) => {
+                                prepareRow(row);
+                                return (
+                                    <tr {...row.getRowProps()}>
+                                        {row.cells.map((cell) => {
+                                            return (
+                                                <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+                                            );
+                                        })}
+                                    </tr>
+                                );
+                            })}
+                        </tbody>
+                    ) : (
+                        "No Record Found."
+                    ))}
+
+In above example , rows will be created only if there is data loaded otherwise we can show loader untill we have data.
+After completing loading process if there is no data  it will provide message " No records Found".
+
+3.Is there any difference between regular function syntax and the shorter arrow function syntax? (Write the answer in your own words)
+Ans :
+ -Regular function:
+  It is necessary to use function keyword
+  Need to write return statement.
+-Arrow function:
+  No need to use function keyword, we can declared like const or variable.
+  If there is single line function no need to write return statement.
+
+       Example of arrow functions:-
+       const square=(x)=>x*x
+
+       Example of regular functions:-
+       let s = function sqaure(x){
+        return (x*x);
+       };
+
+4.What is the difference between ‘myFunctionCall(++foo)’   and  ‘myFunctionCall(foo++)’
+Ans :
+    First of all we can not pass operators in function arguments , but if we look it as logical question
+    1.myFunctionCall(++foo) : It will increment foo argument value by 1 before we use it inside function as it is pre-increment operator.
+    2..myFunctionCall(foo++) : It will not increment foo argument before use as it is post increment operator.
+
+5.In your own words, explain what a javascript ‘class’ is and how it differs from a function.
+Ans :
+   Javascript class :  It is mechanism of grouping functions together and then we can use class instance to call functions of the class.
+    To create javascript class there is certain steps:
+1.class declaration
+2.class expression
+3.class body and function defination
+ 
+   where "functions" are independent entity.
+   we can create functions and call it , if function is independant it does not require instance of class but if function is define inside a class then it needs class instace to call.
+
+
